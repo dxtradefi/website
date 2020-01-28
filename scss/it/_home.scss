@@ -1,0 +1,380 @@
+$body: #242D3E;
+$text: #E6E6E6;
+$border: #565D6D;
+$orange: #D58D60;
+$green: #A8B780;
+$red: #D56060;
+$blue: #27588D;
+$violet: #67658D;
+$shadow: #000000;
+
+
+
+  // ВЕРХНЯЯ ЧАСТЬ С КАРИНКОЙ
+img#virus {
+  height: 240px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 50;
+  animation: virus 7s ease-in-out infinite;
+  @media (max-width: 500px) {
+    bottom: 25px;
+    height: 200px;
+  }
+}
+div#virus-shadow {
+  width: 220px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(1);
+  background: darken($body, 8);
+  z-index: 48;
+  animation: virus-shadow 7s ease-in-out infinite;
+  @media (max-width: 500px) {
+    width: 190px;
+  }
+}
+div#virus-drops {
+  width: 255px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scale(1.3);
+  z-index: 49;
+  @media (max-width: 500px) {
+    width: 255px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+  #drop1 {
+    width: 14px;
+    transform: translate(10px, 210px) scale(.9);
+    animation: drop1 5s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 14px;
+    }
+  }
+  #drop2 {
+    width: 8px;
+    transform: translate(-15px, 190px) scale(.9);
+    animation: drop2 3s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 8px;
+    }
+  }
+  #drop3 {
+    width: 8px;
+    transform: translate(-5px, 80px) scale(.9);
+    animation: drop3 5s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 8px;
+    }
+  }
+  #drop4 {
+    width: 10px;
+    transform: translate(70px, 35px) scale(.9);
+    animation: drop4 4s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 10px;
+    }
+  }
+  #drop5 {
+    width: 6px;
+    transform: translate(80px, 25px) scale(.9);
+    animation: drop5 6s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 6px;
+    }
+  }
+  #drop6 {
+    width: 7px;
+    transform: translate(120px, 50px) scale(.9);
+    animation: drop6 7s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 7px;
+    }
+  }
+  #drop7 {
+    width: 5px;
+    transform: translate(150px, 130px) scale(.9);
+    animation: drop7 3s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 5px;
+    }
+  }
+  #drop8 {
+    width: 10px;
+    transform: translate(135px, 160px) scale(.9);
+    animation: drop8 4s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 10px;
+    }
+  }
+  #drop9 {
+    width: 14px;
+    transform: translate(135px, 170px) scale(.9);
+    animation: drop9 7s ease-in-out infinite;
+    @media (max-width: 500px) {
+      width: 14px;
+    }
+  }
+}
+
+@keyframes virus {
+  50% {transform: translate(0px, 5px);}
+}
+@keyframes virus-shadow {
+  50% {transform: translateX(-50%) scale(1.1)}
+}
+
+@keyframes drop1 {
+  50% {transform: translate(10px, 200px);}
+}
+@keyframes drop2 {
+  50% {transform: translate(-15px, 185px);}
+}
+@keyframes drop3 {
+  50% {transform: translate(-5px, 70px);}
+}
+@keyframes drop4 {
+  50% {transform: translate(70px, 45px);}
+}
+@keyframes drop5 {
+  50% {transform: translate(80px, 35px);}
+}
+@keyframes drop6 {
+  50% {transform: translate(120px, 45px);}
+}
+@keyframes drop7 {
+  50% {transform: translate(150px, 120px);}
+}
+@keyframes drop8 {
+  50% {transform: translate(135px, 150px);}
+}
+@keyframes drop9 {
+  50% {transform: translate(135px, 180px);}
+}
+  // INFECTED FILES
+.del-file {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  z-index: 1;
+  &::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    opacity: 1;
+    border-radius: 50%;
+    background: $body;
+  }
+  &::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    opacity: 1;
+    border-radius: 50%;
+    background: $body;
+  }
+}
+.infected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: $text;
+  border-radius: 3px;
+  opacity: 0;
+  color: $body;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 5px 5px 15px rgba($shadow, .3);
+  z-index: 1;
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-style: solid;
+    border-color: transparent $body transparent transparent;
+    z-index: 10;
+  }
+  &:nth-of-type(1) {
+    width: 40px;
+    height: 60px;
+    top: -110px;
+    left: 15px;
+    animation: filefly 10s ease-in infinite;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s cubic-bezier(1,-0.1, 0.76, 0.79) infinite;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(1, 0.07, 0.78, 0.96) infinite;
+      }
+    }
+    &::after {
+      border-width: 0 15px 15px 0;
+    }
+  }
+  &:nth-of-type(2) {
+    width: 20px;
+    height: 25px;
+    top:  -80px;
+    left: 95px;
+    font-size: .7rem;
+    border-radius: 1px;
+    animation: filefly 10s ease-in infinite;
+    animation-delay: 4s;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s ease-in infinite;
+        animation-delay: 4s;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(1,-0.19, 0.98, 0.78) infinite;
+        animation-delay: 4s;
+      }
+    }
+    &::after {
+      border-width: 0 10px 10px 0;
+    }
+  }
+  &:nth-of-type(3) {
+    width: 30px;
+    height: 40px;
+    top:  -100px;
+    animation: filefly 10s ease-in infinite;
+    animation-delay: 12s;
+    font-size: 1.3rem;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s cubic-bezier(0.25, 0.51, 0.51, 1.1) infinite;
+        animation-delay: 12s;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(0.07, 0.55, 0.79, 0.74) infinite;
+        animation-delay: 12s;
+      }
+    }
+    &::after {
+      border-width: 0 10px 10px 0;
+    }
+  }
+  &:nth-of-type(4) {
+    width: 25px;
+    height: 35px;
+    top:  -90px;
+    right: 100px;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    animation: filefly 10s ease-in infinite;
+    animation-delay: 8s;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s ease-in infinite;
+        animation-delay: 8s;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(1,-0.19, 0.98, 0.78) infinite;
+        animation-delay: 8s;
+      }
+    }
+    &::after {
+      border-width: 0 10px 10px 0;
+    }
+  }
+  &:nth-of-type(5) {
+    width: 45px;
+    height: 60px;
+    top:  -110px;
+    animation: filefly 10s ease-in infinite;
+    animation-delay: 16s;
+    right: 15px;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s ease-in infinite;
+        animation-delay: 16s;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(1,-0.19, 0.98, 0.78) infinite;
+        animation-delay: 16s;
+      }
+    }
+    &::after {
+      border-width: 0 15px 15px 0;
+    }
+  }
+}
+
+@keyframes filefly {
+  0% {transform: translateY(0px); opacity: 0;}
+  5% {transform: translateY(0px); opacity: 1;}
+  68% {transform: translateY(270px) ; opacity: 1;}
+  69% { transform: translateY(300); opacity: 0;}
+  70% { transform: translateY(0); opacity: 0;}
+}
+
+@keyframes fileremove {
+  0% { transform: scale(0); }
+  40% { transform: scale(0);}
+  68% {transform: scale(23);}
+  70% { transform: scale(23);}
+}
+
+
+  // СОДЕРЖАНИЕ
+h1.home {
+  font-size: 9rem;
+  @media (max-width: 500px) {
+    font-size: 7rem;
+  }
+}
+h2.home {
+  font-size: 3.5rem;
+  @media (max-width: 500px) {
+    font-size: 2.8rem;
+  }
+}
+h3.home {
+  font-size: 2.2rem;
+  margin: 15px 0 30px;
+  @media (max-width: 500px) {
+    font-size: 1.7rem;
+  }
+}
+p.home {
+  margin-bottom: 50px;
+  font-size: 1.6rem;
+  line-height: 25px;
+  text-align: center;
+  @media (max-width: 500px) {
+    // width: 85%;
+    font-size: 1.4rem;
+    line-height: 20px;
+    text-align: left;
+  }
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 900px)
+  and (orientation: landscape) {
+    width: 75%;
+  }
+}

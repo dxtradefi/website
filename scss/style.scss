@@ -1,0 +1,79 @@
+$body: #242D3E;
+$text: #E6E6E6;
+$border: #565D6D;
+$orange: #D58D60;
+$green: #A8B780;
+$red: #D56060;
+$blue: #27588D;
+$violet: #67658D;
+$shadow: #000000;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+  display: flex;
+  @media (min-width: 700px) {
+    font-size: 62.5%;
+  }
+}
+html, body {
+  height: 100%;
+  background: $body;
+  color: $text;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 900px)
+    and (orientation: landscape) {
+      height: auto;
+  }
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 900px)
+  and (orientation: portrait) {
+    height: auto;
+}
+}
+a {
+  text-decoration: none;
+  color: $text;
+  cursor: pointer;
+  &:visited {
+    color: $text;
+  }
+  &:active {
+    color: $text;
+  }
+}
+
+button {
+  outline: none;
+}
+ul {
+  list-style-type: none;
+}
+h1, h2, h3, h4, h5, button, a {
+  font-weight: 700;
+}
+p, span {
+  font-weight: 300;
+}
+
+
+
+  
+@import './index';
+@import './templates';
+
+  // IMPORT IT PAGES
+@import './it/main';

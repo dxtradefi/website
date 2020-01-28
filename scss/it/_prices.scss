@@ -1,0 +1,169 @@
+$body: #242D3E;
+$text: #E6E6E6;
+$border: #565D6D;
+$orange: #D58D60;
+$green: #A8B780;
+$red: #D56060;
+$blue: #27588D;
+$violet: #67658D;
+$shadow: #000000;
+
+
+  // ВЕРХНЯЯ ЧАСТЬ С КАРИНКОЙ
+img#price-pic {
+  width: 350px;
+  position: absolute;
+  bottom: 50px;
+  transform: scale(1.2);
+  z-index: 50;
+  @media (max-width: 500px) {
+    width: 100%;
+    transform: scale(1);
+  }
+}
+
+#price-stars {
+  width: 300px;
+  height: 120px;
+  position: absolute;
+  top: 70px;
+  transform: scale(1.2);
+  z-index: 55;
+  @media (max-width: 500px) {
+    transform: scale(1);
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    fill: darken($text, 15);
+    &:nth-of-type(1) {
+      top: 6px;
+      left: 6px;
+      opacity: 0;
+      animation: star-xs 3s ease-in-out infinite;
+      transform: scale(0);
+    }
+    &:nth-of-type(2) {
+      top: 20px;
+      left: 42px;
+      opacity: 0;
+      transform: scale(0);
+      animation: star-s 3s ease-in-out infinite;
+      animation-delay: 6s;
+    }
+    &:nth-of-type(3) {
+      top: 45px;
+      left: 15px;
+      transform: scale(0);
+      animation: star-m 3s ease-in-out infinite;
+      animation-delay: 4s;
+    }
+    &:nth-of-type(4) {
+      top: 15px;
+      right: 20px;
+      transform: scale(0);
+      animation: star-s 3s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+    &:nth-of-type(5) {
+     top: 45px;
+     right: 40px;
+     transform: scale(0);
+     animation: star-xs 3s ease-in-out infinite;
+     animation-delay: 2s;
+    }
+    &:nth-of-type(6) {
+      top: 40px;
+      right: -20px;
+      transform: scale(0);
+      animation: star-m 3s ease-in-out infinite;
+      animation-delay: 3s;
+    }
+    &:nth-of-type(7) {
+      bottom: 21px;
+      right: 5px;
+      transform: scale(0);
+      animation: star-l 3s ease-in-out infinite;
+      animation-delay: 5s;
+    }
+  }
+}
+@keyframes star-xs {
+  25% {transform: scale(.4);  opacity: 1;}
+  55% {transform: scale(0); opacity: 0;}
+}
+@keyframes star-s {
+  35% {transform: scale(.6);  opacity: 1;}
+  70% {transform: scale(0); opacity: 0;}
+}
+@keyframes star-m {
+  30% {transform: scale(.8);  opacity: 1;}
+  60% {transform: scale(0); opacity: 0;}
+}
+@keyframes star-l {
+  33% {transform: scale(1);  opacity: 1;}
+  66% {transform: scale(0); opacity: 0;}
+}
+
+  // СОДЕРЖАНИЕ
+  // Список цен
+ul.price-list {
+  width: 100%;
+  margin-bottom: 70px;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-bottom: 1px solid rgba($text, 0.12);
+    transition: all .3s ease-in-out;
+    &:last-of-type {
+      border: none;
+    }
+  }
+  div.price-tle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px 5px 15px;
+    h3 {
+      width: calc(100% - 100px);
+      flex-grow: 2;
+      padding-right: 15px;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 23px;
+      pointer-events: none;
+    }
+    span {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+  div.worktime {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px 20px 15px;
+    i {
+      width: 25px;
+      position: relative;
+      left: -5px;
+      color: darken($text, 20);
+      font-size: 1.7rem;
+    }
+    span {
+      flex-grow: 2;
+      color: darken($text, 20);
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+    div.time {
+      color: darken($text, 20);
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+}
