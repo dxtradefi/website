@@ -147,21 +147,21 @@ ul.price-list {
     display: flex;
     align-items: center;
     padding: 5px 15px 20px 15px;
+    color: darken($text, 20);
     i {
       width: 25px;
       position: relative;
       left: -5px;
-      color: darken($text, 20);
       font-size: 1.7rem;
     }
     span {
       flex-grow: 2;
-      color: darken($text, 20);
+      padding-right: 20px;
       font-size: 1.4rem;
       font-weight: 300;
     }
     div.time {
-      color: darken($text, 20);
+      text-align: right;
       font-size: 1.4rem;
       font-weight: 300;
     }

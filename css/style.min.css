@@ -1738,22 +1738,22 @@ ul.price-list {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 5px 15px 20px 15px; }
+    padding: 5px 15px 20px 15px;
+    color: #b3b3b3; }
     ul.price-list div.worktime i {
       width: 25px;
       position: relative;
       left: -5px;
-      color: #b3b3b3;
       font-size: 1.7rem; }
     ul.price-list div.worktime span {
       -webkit-box-flex: 2;
           -ms-flex-positive: 2;
               flex-grow: 2;
-      color: #b3b3b3;
+      padding-right: 20px;
       font-size: 1.4rem;
       font-weight: 300; }
     ul.price-list div.worktime div.time {
-      color: #b3b3b3;
+      text-align: right;
       font-size: 1.4rem;
       font-weight: 300; }
 
