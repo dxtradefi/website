@@ -1,10 +1,10 @@
 window.addEventListener('load', () => {
   
+    // Список услуг
+  const list = document.querySelector('.service')
   const listItem = document.querySelectorAll('.service-list')
-  const title = document.querySelectorAll('.serv-tle')
-  const content = document.querySelectorAll('.serv-tle-content')
-  
-    // Ищем ячейки с дополнительной информацией
+
+  //   // Ищем ячейки с дополнительной информацией
   const arrBtnPlus = []
   for (const el of listItem) {
     if (el.children.length > 1) {
@@ -22,11 +22,11 @@ window.addEventListener('load', () => {
     el.children[0].append(btn)
   })
  
-  const openContent = (e) => {
+  const openContent = (el) => {
       // Берем id родителя
-    const idEl = e.target.parentElement.id
+    const idEl = el.id
       // Берем span
-    const childEl = e.target.querySelector('span')    
+    const childEl = el.querySelector('span')    
        // Перебираем массив с доп. инфой
     for (const txt of arrBtnPlus) {
       const infoBox = txt.children[1]      
@@ -39,7 +39,10 @@ window.addEventListener('load', () => {
       }
     }
   } 
-  title.forEach((btn) => {        
-    btn.addEventListener('click', openContent)
-  });  
+    // Делигирование
+    // Метод closest() - возвращает ближайший родительский элемент
+  list.addEventListener('click', e => {
+    const el = e.target.closest('li')
+    openContent(el)
+  })
 })
