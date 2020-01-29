@@ -146,13 +146,14 @@ ul.price-list {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 5px 15px 20px 15px;
     color: darken($text, 20);
     i {
-      width: 25px;
       position: relative;
+      top: -1px;
       left: -5px;
-      font-size: 1.7rem;
+      font-size: 1.8rem;
     }
     span {
       flex-grow: 2;
