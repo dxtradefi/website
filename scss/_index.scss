@@ -49,16 +49,18 @@ main#main-p {
     display: flex;
     // justify-content: flex-end;
     align-items: center;
+    padding-top: 20px;
     padding-right: 10px;
     padding-left: 20px;
     // position: absolute;
     z-index: 10;
     span {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      font-weight: bold;
       color: rgba($text, .8);
     }
     img {
-      width: 45px;
+      width: 80px;
       opacity: .8;
     }
   }
