@@ -595,8 +595,15 @@ div#main-p-bg {
       top: 0px;
       left: 0px;
       border-radius: 50%;
+      background: #A8B780;
+      -webkit-filter: blur(3px);
+              filter: blur(3px);
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+      opacity: 1;
       -webkit-animation: callphone 3s ease-in-out infinite;
-              animation: callphone 3s ease-in-out infinite; }
+              animation: callphone 3s ease-in-out infinite;
+      z-index: -1; }
   .it-btn i {
     position: absolute;
     font-size: 2.6rem;
@@ -610,19 +617,15 @@ div#main-p-bg {
 
 @-webkit-keyframes callphone {
   50% {
-    -webkit-box-shadow: 0 0 0px 0px red;
-            box-shadow: 0 0 0px 0px red; }
-  100% {
-    -webkit-box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0);
-            box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0); } }
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0; } }
 
 @keyframes callphone {
   50% {
-    -webkit-box-shadow: 0 0 0px 0px red;
-            box-shadow: 0 0 0px 0px red; }
-  100% {
-    -webkit-box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0);
-            box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0); } }
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0; } }
 
 .circle-btn, .main-phone-btn,
 .main-email-btn, .main-geo-btn {
