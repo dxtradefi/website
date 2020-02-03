@@ -595,8 +595,6 @@ div#main-p-bg {
       top: 0px;
       left: 0px;
       border-radius: 50%;
-      -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780;
-              box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780;
       -webkit-animation: callphone 3s ease-in-out infinite;
               animation: callphone 3s ease-in-out infinite; }
   .it-btn i {
