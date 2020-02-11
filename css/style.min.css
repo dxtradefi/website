@@ -1254,10 +1254,11 @@ div#virus-drops {
             transform: scale(23); } }
 
 h1.home {
-  font-size: 9rem; }
+  font-size: 7rem;
+  margin-bottom: 10px; }
   @media (max-width: 500px) {
     h1.home {
-      font-size: 7rem; } }
+      font-size: 4rem; } }
 
 h2.home {
   font-size: 3.5rem; }
