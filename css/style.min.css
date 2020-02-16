@@ -41,7 +41,7 @@ button {
   outline: none; }
 
 ul {
-  list-style-type: disc; }
+  list-style-type: none; }
 
 h1, h2, h3, h4, h5, button, a {
   font-weight: 700; }
@@ -1254,11 +1254,11 @@ div#virus-drops {
             transform: scale(23); } }
 
 h1.home {
-  font-size: 7rem;
-  margin-bottom: 10px; }
+  font-size: 5rem;
+  margin: 20px 0; }
   @media (max-width: 500px) {
     h1.home {
-      font-size: 4rem; } }
+      font-size: 3.5rem; } }
 
 h2.home {
   font-size: 3.5rem; }
