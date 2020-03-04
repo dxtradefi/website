@@ -1641,8 +1641,8 @@ div#virus-drops #drop1 {
 
 div#virus-drops #drop2 {
   width: 8px;
-  -webkit-transform: translate(-15px, 190px) scale(0.9);
-          transform: translate(-15px, 190px) scale(0.9);
+  -webkit-transform: translate(-5px, 190px) scale(0.9);
+          transform: translate(-5px, 190px) scale(0.9);
   -webkit-animation: drop2 3s ease-in-out infinite;
           animation: drop2 3s ease-in-out infinite;
 }
@@ -1655,8 +1655,8 @@ div#virus-drops #drop2 {
 
 div#virus-drops #drop3 {
   width: 8px;
-  -webkit-transform: translate(-5px, 80px) scale(0.9);
-          transform: translate(-5px, 80px) scale(0.9);
+  -webkit-transform: translate(5px, 80px) scale(0.9);
+          transform: translate(5px, 80px) scale(0.9);
   -webkit-animation: drop3 5s ease-in-out infinite;
           animation: drop3 5s ease-in-out infinite;
 }
@@ -1669,8 +1669,8 @@ div#virus-drops #drop3 {
 
 div#virus-drops #drop4 {
   width: 10px;
-  -webkit-transform: translate(70px, 35px) scale(0.9);
-          transform: translate(70px, 35px) scale(0.9);
+  -webkit-transform: translate(100px, 35px) scale(0.9);
+          transform: translate(100px, 35px) scale(0.9);
   -webkit-animation: drop4 4s ease-in-out infinite;
           animation: drop4 4s ease-in-out infinite;
 }
@@ -1683,8 +1683,8 @@ div#virus-drops #drop4 {
 
 div#virus-drops #drop5 {
   width: 6px;
-  -webkit-transform: translate(80px, 25px) scale(0.9);
-          transform: translate(80px, 25px) scale(0.9);
+  -webkit-transform: translate(110px, 25px) scale(0.9);
+          transform: translate(110px, 25px) scale(0.9);
   -webkit-animation: drop5 6s ease-in-out infinite;
           animation: drop5 6s ease-in-out infinite;
 }
@@ -1697,8 +1697,8 @@ div#virus-drops #drop5 {
 
 div#virus-drops #drop6 {
   width: 7px;
-  -webkit-transform: translate(120px, 50px) scale(0.9);
-          transform: translate(120px, 50px) scale(0.9);
+  -webkit-transform: translate(150px, 50px) scale(0.9);
+          transform: translate(150px, 50px) scale(0.9);
   -webkit-animation: drop6 7s ease-in-out infinite;
           animation: drop6 7s ease-in-out infinite;
 }
@@ -1711,8 +1711,8 @@ div#virus-drops #drop6 {
 
 div#virus-drops #drop7 {
   width: 5px;
-  -webkit-transform: translate(150px, 130px) scale(0.9);
-          transform: translate(150px, 130px) scale(0.9);
+  -webkit-transform: translate(210px, 130px) scale(0.9);
+          transform: translate(210px, 130px) scale(0.9);
   -webkit-animation: drop7 3s ease-in-out infinite;
           animation: drop7 3s ease-in-out infinite;
 }
@@ -1725,8 +1725,8 @@ div#virus-drops #drop7 {
 
 div#virus-drops #drop8 {
   width: 10px;
-  -webkit-transform: translate(135px, 160px) scale(0.9);
-          transform: translate(135px, 160px) scale(0.9);
+  -webkit-transform: translate(200px, 160px) scale(0.9);
+          transform: translate(200px, 160px) scale(0.9);
   -webkit-animation: drop8 4s ease-in-out infinite;
           animation: drop8 4s ease-in-out infinite;
 }
@@ -1739,8 +1739,8 @@ div#virus-drops #drop8 {
 
 div#virus-drops #drop9 {
   width: 14px;
-  -webkit-transform: translate(135px, 170px) scale(0.9);
-          transform: translate(135px, 170px) scale(0.9);
+  -webkit-transform: translate(210px, 170px) scale(0.9);
+          transform: translate(210px, 170px) scale(0.9);
   -webkit-animation: drop9 7s ease-in-out infinite;
           animation: drop9 7s ease-in-out infinite;
 }
@@ -1795,113 +1795,113 @@ div#virus-drops #drop9 {
 
 @-webkit-keyframes drop2 {
   50% {
-    -webkit-transform: translate(-15px, 185px);
-            transform: translate(-15px, 185px);
+    -webkit-transform: translate(-5px, 185px);
+            transform: translate(-5px, 185px);
   }
 }
 
 @keyframes drop2 {
   50% {
-    -webkit-transform: translate(-15px, 185px);
-            transform: translate(-15px, 185px);
+    -webkit-transform: translate(-5px, 185px);
+            transform: translate(-5px, 185px);
   }
 }
 
 @-webkit-keyframes drop3 {
   50% {
-    -webkit-transform: translate(-5px, 70px);
-            transform: translate(-5px, 70px);
+    -webkit-transform: translate(5px, 70px);
+            transform: translate(5px, 70px);
   }
 }
 
 @keyframes drop3 {
   50% {
-    -webkit-transform: translate(-5px, 70px);
-            transform: translate(-5px, 70px);
+    -webkit-transform: translate(5px, 70px);
+            transform: translate(5px, 70px);
   }
 }
 
 @-webkit-keyframes drop4 {
   50% {
-    -webkit-transform: translate(70px, 45px);
-            transform: translate(70px, 45px);
+    -webkit-transform: translate(100px, 45px);
+            transform: translate(100px, 45px);
   }
 }
 
 @keyframes drop4 {
   50% {
-    -webkit-transform: translate(70px, 45px);
-            transform: translate(70px, 45px);
+    -webkit-transform: translate(100px, 45px);
+            transform: translate(100px, 45px);
   }
 }
 
 @-webkit-keyframes drop5 {
   50% {
-    -webkit-transform: translate(80px, 35px);
-            transform: translate(80px, 35px);
+    -webkit-transform: translate(110px, 35px);
+            transform: translate(110px, 35px);
   }
 }
 
 @keyframes drop5 {
   50% {
-    -webkit-transform: translate(80px, 35px);
-            transform: translate(80px, 35px);
+    -webkit-transform: translate(110px, 35px);
+            transform: translate(110px, 35px);
   }
 }
 
 @-webkit-keyframes drop6 {
   50% {
-    -webkit-transform: translate(120px, 45px);
-            transform: translate(120px, 45px);
+    -webkit-transform: translate(150px, 45px);
+            transform: translate(150px, 45px);
   }
 }
 
 @keyframes drop6 {
   50% {
-    -webkit-transform: translate(120px, 45px);
-            transform: translate(120px, 45px);
+    -webkit-transform: translate(150px, 45px);
+            transform: translate(150px, 45px);
   }
 }
 
 @-webkit-keyframes drop7 {
   50% {
-    -webkit-transform: translate(150px, 120px);
-            transform: translate(150px, 120px);
+    -webkit-transform: translate(210px, 120px);
+            transform: translate(210px, 120px);
   }
 }
 
 @keyframes drop7 {
   50% {
-    -webkit-transform: translate(150px, 120px);
-            transform: translate(150px, 120px);
+    -webkit-transform: translate(210px, 120px);
+            transform: translate(210px, 120px);
   }
 }
 
 @-webkit-keyframes drop8 {
   50% {
-    -webkit-transform: translate(135px, 150px);
-            transform: translate(135px, 150px);
+    -webkit-transform: translate(200px, 150px);
+            transform: translate(200px, 150px);
   }
 }
 
 @keyframes drop8 {
   50% {
-    -webkit-transform: translate(135px, 150px);
-            transform: translate(135px, 150px);
+    -webkit-transform: translate(200px, 150px);
+            transform: translate(200px, 150px);
   }
 }
 
 @-webkit-keyframes drop9 {
   50% {
-    -webkit-transform: translate(135px, 180px);
-            transform: translate(135px, 180px);
+    -webkit-transform: translate(210px, 180px);
+            transform: translate(210px, 180px);
   }
 }
 
 @keyframes drop9 {
   50% {
-    -webkit-transform: translate(135px, 180px);
-            transform: translate(135px, 180px);
+    -webkit-transform: translate(210px, 180px);
+            transform: translate(210px, 180px);
   }
 }
 
