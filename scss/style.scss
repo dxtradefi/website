@@ -67,13 +67,29 @@ h1, h2, h3, h4, h5, button, a {
 }
 p, span {
   font-weight: 300;
+  line-height: 23px;
+  &:not(.main) {
+    color: darken($text, 20);
+  }
 }
 
 
 
   
 @import './index';
-@import './templates';
 
-  // IMPORT IT PAGES
-@import './it/main';
+@import './templates';
+@import './sites';
+@import './delivery';
+@import './contacts';
+
+
+// IMPORT IT
+@import './it/index';
+@import './it/service';
+@import './it/prices';
+
+// IMPORT BOAT
+@import './boat/index';
+@import './boat/boats';
+@import './boat/boats-spec';

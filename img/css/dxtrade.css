@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'dxtrade';
-  src: url('../font/dxtrade.eot?33487162');
-  src: url('../font/dxtrade.eot?33487162#iefix') format('embedded-opentype'),
-       url('../font/dxtrade.woff2?33487162') format('woff2'),
-       url('../font/dxtrade.woff?33487162') format('woff'),
-       url('../font/dxtrade.ttf?33487162') format('truetype'),
-       url('../font/dxtrade.svg?33487162#dxtrade') format('svg');
+  src: url('../font/dxtrade.eot?29592826');
+  src: url('../font/dxtrade.eot?29592826#iefix') format('embedded-opentype'),
+       url('../font/dxtrade.woff2?29592826') format('woff2'),
+       url('../font/dxtrade.woff?29592826') format('woff'),
+       url('../font/dxtrade.ttf?29592826') format('truetype'),
+       url('../font/dxtrade.svg?29592826#dxtrade') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'dxtrade';
-    src: url('../font/dxtrade.svg?33487162#dxtrade') format('svg');
+    src: url('../font/dxtrade.svg?29592826#dxtrade') format('svg');
   }
 }
 */
@@ -55,22 +55,24 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-webdev:before { content: '\e800'; } /* '' */
-.icon-arrow:before { content: '\e801'; } /* '' */
+.icon-arrow:before { content: '\e800'; } /* '' */
+.icon-back:before { content: '\e801'; } /* '' */
 .icon-backup:before { content: '\e802'; } /* '' */
-.icon-contact:before { content: '\e803'; } /* '' */
-.icon-delivery:before { content: '\e804'; } /* '' */
-.icon-doc:before { content: '\e805'; } /* '' */
-.icon-email:before { content: '\e806'; } /* '' */
-.icon-gear:before { content: '\e807'; } /* '' */
-.icon-geo:before { content: '\e808'; } /* '' */
-.icon-history:before { content: '\e809'; } /* '' */
-.icon-home:before { content: '\e80a'; } /* '' */
-.icon-network:before { content: '\e80b'; } /* '' */
-.icon-pc:before { content: '\e80c'; } /* '' */
-.icon-phone:before { content: '\e80d'; } /* '' */
-.icon-time:before { content: '\e80e'; } /* '' */
-.icon-virus:before { content: '\e80f'; } /* '' */
-.icon-wallet:before { content: '\e810'; } /* '' */
-.icon-smartphone:before { content: '\e811'; } /* '' */
-.icon-info:before { content: '\e812'; } /* '' */
+.icon-boat:before { content: '\e803'; } /* '' */
+.icon-contact:before { content: '\e804'; } /* '' */
+.icon-delivery:before { content: '\e805'; } /* '' */
+.icon-doc:before { content: '\e806'; } /* '' */
+.icon-email:before { content: '\e807'; } /* '' */
+.icon-gear:before { content: '\e808'; } /* '' */
+.icon-geo:before { content: '\e809'; } /* '' */
+.icon-history:before { content: '\e80a'; } /* '' */
+.icon-home:before { content: '\e80b'; } /* '' */
+.icon-info:before { content: '\e80c'; } /* '' */
+.icon-network:before { content: '\e80d'; } /* '' */
+.icon-pc:before { content: '\e80e'; } /* '' */
+.icon-phone:before { content: '\e80f'; } /* '' */
+.icon-time:before { content: '\e810'; } /* '' */
+.icon-virus:before { content: '\e811'; } /* '' */
+.icon-wallet:before { content: '\e812'; } /* '' */
+.icon-webdev:before { content: '\e813'; } /* '' */
+.icon-smartphone:before { content: '\e814'; } /* '' */

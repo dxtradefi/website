@@ -1,0 +1,80 @@
+$body: #242D3E;
+$text: #E6E6E6;
+$border: #565D6D;
+$orange: #D58D60;
+$green: #A8B780;
+$red: #D56060;
+$blue: #27588D;
+$violet: #67658D;
+$shadow: #000000;
+
+a.boat-item {
+  width: 500px;
+  height: 250px;
+  margin-bottom: 90px;
+  position: relative;
+  @media screen 
+    and (max-width: 500px) 
+    and (orientation: portrait) {
+      width: 98%;
+  }
+  &:last-child {
+    margin-bottom: 140px;
+  }
+  figure {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    overflow: hidden;
+    border-radius: 24px;
+    img {
+      width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+  }
+}
+div.boat-content {
+  // height: 120px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  border-radius: 20px;
+  background: linear-gradient(to top, lighten($body, 5) 0%, $body 100%);
+  box-shadow: 0 10px 10px rgba($shadow, .1);
+  h2 {
+    width: 60%;
+    padding: 5px 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  span {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: $body;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: $green;
+    box-shadow: inset 0px 3px 5px rgba($shadow, .5);
+  }
+  p {
+    width: 100%;
+    padding-top: 10px;
+    color: darken($text, 10);
+    font-size: 1.5rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}

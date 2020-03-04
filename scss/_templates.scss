@@ -36,17 +36,25 @@ $shadow: #000000;
 .btn2 {
   position: relative;
   border-radius: 150px;
-  border: 2px solid lighten($body, 3);
+  border: 5px solid transparent;
   background: $body;
   box-shadow: 
-    -3px -3px 10px rgba(lighten($body, 13), .55),
-    -6px -6px 15px rgba(lighten($body, 13), .25),
-    3px 3px 10px rgba(darken($body, 30), .55),
-    6px 6px 15px rgba(darken($body, 30), .25);
+    inset 0 0 0px rgba(darken($body, 20), .55),
+    -3px -3px 10px rgba(lighten($body, 10), .55),
+    -6px -6px 15px rgba(lighten($body, 10), .25),
+    3px 3px 10px rgba(darken($body, 10), .55),
+    6px 6px 15px rgba(darken($body, 10), .25);
   transition: all .3s ease-in-out;
   z-index: 5;
   &:hover {
-    background: lighten($body, 3);
+    // background: lighten($body, 3);
+    // border-color: lighten($body, 15);
+    box-shadow: 
+      inset 0 0 20px rgba(darken($body, 30), .55),
+      -3px -3px 10px rgba(lighten($body, 10), .55),
+      -6px -6px 15px rgba(lighten($body, 10), .25),
+      3px 3px 10px rgba(darken($body, 10), .55),
+      6px 6px 15px rgba(darken($body, 10), .25);
   // &::after {
   //   content: '';
   //   width: calc(100% - 6px);
@@ -183,6 +191,12 @@ nav {
           background: lighten($body, 50);
         }
       }
+      // Кнопка назад
+      &.back-btn {
+        @media (max-width: 500px) {
+         display: none;
+        }
+      }
     }
     a {
       display: flex;
@@ -212,5 +226,78 @@ nav {
       }
     }
 
+  }
+}
+
+  // Кнопка назад для моб.
+div#btn_back_spec {
+  width: 600px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: darken($body, 3);
+  z-index: 100;
+  @media only screen
+    and (max-device-width: 900px)
+    and (orientation: landscape) {
+      width: 100%;
+    }
+}
+div#btn_back, #btn_back_spec {
+  display: none;
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 500px)
+    and (orientation: portrait) {
+      width: 100%;
+      height: 60px;
+      position: fixed;
+      top: 0;
+      display: flex;
+      align-items: center;
+      background-color: darken($body, 3);
+      z-index: 100;
+    }
+  a {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-right: 15px;
+    #btn_back--icon {
+      width: 20px;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50px;
+      background: $text;
+      &::after {
+        content: '';
+        width: 10px;
+        height: 3px;
+        position: absolute;
+        background: inherit;
+        border-radius: inherit;
+        top: 4px;
+        transform: rotate(45deg);
+      }
+      &::before {
+        content: '';
+        width: 10px;
+        height: 3px;
+        position: absolute;
+        background: inherit;
+        border-radius: inherit;
+        top: -4px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  span {
+    font-size: 1.6rem;
+    font-weight: 400;
   }
 }

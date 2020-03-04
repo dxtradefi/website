@@ -11,13 +11,12 @@ $shadow: #000000;
 
 
 // Начальная страница с градиентом
-body#main-p {
+body#main-block {
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background: $body;
-  width: 100%;
   @media (min-width: 500px) {
     margin: auto;
   }
@@ -30,10 +29,11 @@ body#main-p {
 }
 
   // Содержание
-main#main-p {
+main#main-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
   @media only screen and (min-width: 700px) {
     width: 700px;
   }

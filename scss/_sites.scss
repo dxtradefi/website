@@ -8,7 +8,8 @@ $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
 
-body#it {
+body#it,
+body#boat {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -18,9 +19,10 @@ body#it {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 75px;
+    padding-top: 60px;
+    // position: relative;
     @media only screen and (min-width: 500px) {
-      width: 500px;
+      width: 600px;
       // max-height: 800px;
       margin: auto;
     }
@@ -36,10 +38,14 @@ body#it {
       and (max-device-width: 500px)
       and (orientation: portrait) {
         width: 100%;
-        padding-top: 0px;
+        
       }
+    &.pad0 {
+      padding-top: 0px;
+    }
   }
 }
+
   // Блок с картинкой
 section.image {
   height: 365px;
@@ -48,6 +54,9 @@ section.image {
   align-items: center;
   position: relative;
   z-index: 15;
+  img {
+    position: absolute;
+  }
   @media (max-width: 500px) {
     height: 360px;
     overflow: hidden;
@@ -55,27 +64,58 @@ section.image {
 }
   // Блок с содержанием
 section.content {
-  // height: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 15px;
   @media (max-width: 500px) {
     font-size: 7rem;
   }
 
 }
-h1.title {
-  margin: 35px 0;
-  font-size: 4.5rem;
-  // align-self: flex-start;
+  // СОДЕРЖАНИЕ
+h1.home {
+  font-size: 5rem;
+  margin: 25px 0 15px;
   @media (max-width: 500px) {
     font-size: 3.5rem;
   }
 }
+h2.home {
+  font-size: 3.5rem;
+  @media (max-width: 500px) {
+    font-size: 2.8rem;
+  }
+}
+h3.home {
+  font-size: 2.2rem;
+  margin: 15px 0 30px;
+  @media (max-width: 500px) {
+    font-size: 1.7rem;
+  }
+}
+p.home {
+  margin-bottom: 50px;
+  font-size: 1.6rem;
+  text-align: center;
+  @media (max-width: 500px) {
+    // width: 85%;
+    font-size: 1.4rem;
+    line-height: 20px;
+    text-align: left;
+  }
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 900px)
+  and (orientation: landscape) {
+    width: 75%;
+  }
+}
 
-@import './home';
-@import './service';
-@import './prices';
-@import './delivery';
-@import './contacts';
+h1.title {
+  margin: 0px 0 25px;
+  font-size: 4.5rem;
+  @media (max-width: 500px) {
+    font-size: 3.5rem;
+  }
+}
