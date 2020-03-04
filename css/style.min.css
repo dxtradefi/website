@@ -1097,6 +1097,9 @@ body#boat main {
 body#it main.pad0,
 body#boat main.pad0 {
   padding-top: 0px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 section.image {
