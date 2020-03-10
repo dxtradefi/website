@@ -206,7 +206,9 @@ function DOMloaded () {
       // возвращаем к posFinal
     if (posInitial < (posFinal + (slide / 2))) {
       btnAction('next')      
+      
       collage.style.left = `${posFinal}px`
+      console.log(posFinal);
       nextBtn.classList.add('hide')
     } 
       // Если смещение меньше половины последнего слайда
@@ -214,6 +216,8 @@ function DOMloaded () {
     else if (posInitial < (posFinal + slide)){
       nextBtn.classList.remove('hide')
       collage.style.left = `${posFinal + slide}px`
+      console.log(posFinal + slide);
+      
     }
       // Сбрасываем событие нажатия
     document.onmouseup = null
