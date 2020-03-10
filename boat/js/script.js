@@ -49,7 +49,7 @@ function DOMloaded () {
   // СМ. прототип с комментариями
 
   let carusel = document.querySelector('#carusel')
-  let caruselWidth = Math.floor(carusel.getBoundingClientRect().width)
+  let caruselWidth = carusel.getBoundingClientRect().width
   const collage = document.querySelector('#collage')
   const collageWidth = collage.getBoundingClientRect().width
   const nextBtn = document.getElementById('next-btn')
@@ -62,10 +62,6 @@ function DOMloaded () {
   let posX1 = 0
   let posX2 = 0
   let doubleTouch = false
-
-
-  console.log(caruselWidth, collageWidth);
-  
   
   // Событие нажатия мыши
   collage.addEventListener('mousedown', startAction)
@@ -107,12 +103,10 @@ function DOMloaded () {
     }
     
       // Начальная позиция колажа 
-    // posInitial = collage.offsetLeft
+      // posInitial = collage.offsetLeft
     if (e.type === 'touchstart') { 
         // Текущая позиция касания
       posX1 = e.touches[0].screenX
-      
-      
     } else {
       // Текущая позиция мыши
       posX1 = e.clientX
@@ -140,7 +134,7 @@ function DOMloaded () {
     posInitial =  Math.floor(collage.offsetLeft)
       // Конечная позиция колажа 
       // Ширина колажа, ширини карусели, правый отступ 20px
-    posFinal = Math.floor(-(collageWidth - caruselWidth - marginRight))
+    posFinal = -(collageWidth - caruselWidth - marginRight)
       // Центр одной ячейки слайда
     const halfSlide = (slideWidth + marginRight)
 
@@ -170,7 +164,7 @@ function DOMloaded () {
 
       // Отнимаем от текущей позиции элемента
       // полученое смещение курсора
-    collage.style.left = `${Math.floor(collage.offsetLeft - posX2)}px`
+    collage.style.left = `${collage.offsetLeft - posX2}px`
   }
   
     // Функия при отжатии мыши/пальца от карусели
@@ -182,11 +176,11 @@ function DOMloaded () {
       // Конецовка последнего слайда
       // по отношению к правому краю карусели
       // Ширина коллажа - ширина карусели - 20px margin-right
-    posFinal = Math.floor(-(collageWidth - caruselWidth - marginRight))
+    posFinal = -(collageWidth - caruselWidth - marginRight)
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
-    console.log(posInitial, posFinal, 'check');
+    // console.log(posInitial, posFinal, 'check');
     
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
@@ -226,7 +220,7 @@ function DOMloaded () {
 
     // Стрелочный контроллер (кнопки - стрелки)
   function btnAction(dir) {
-    posInitial =  Math.floor(collage.offsetLeft)
+    posInitial =  collage.offsetLeft
 
     let steps = caruselWidth / (slideWidth + marginRight)
     let eachStep = slideLenght - steps
