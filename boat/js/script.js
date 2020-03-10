@@ -49,7 +49,7 @@ function DOMloaded () {
   // СМ. прототип с комментариями
 
   let carusel = document.querySelector('#carusel')
-  let caruselWidth = Math.round(carusel.getBoundingClientRect().width)
+  let caruselWidth = carusel.getBoundingClientRect().width
   const collage = document.querySelector('#collage')
   const collageWidth = collage.getBoundingClientRect().width
   const nextBtn = document.getElementById('next-btn')
@@ -62,6 +62,7 @@ function DOMloaded () {
   let posX1 = 0
   let posX2 = 0
   let doubleTouch = false
+
 
   console.log(caruselWidth);
   
@@ -179,11 +180,11 @@ function DOMloaded () {
       // Конецовка последнего слайда
       // по отношению к правому краю карусели
       // Ширина коллажа - ширина карусели - 20px margin-right
-    posFinal = -(collageWidth - caruselWidth - marginRight)
+    posFinal = Math.round(-(collageWidth - caruselWidth - marginRight))
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
-    console.log(posInitial, posFinal, 'check+');
+    console.log(posInitial, posFinal, 'check-');
     
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
