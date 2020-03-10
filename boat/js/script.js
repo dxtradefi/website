@@ -182,11 +182,11 @@ function DOMloaded () {
       // Конецовка последнего слайда
       // по отношению к правому краю карусели
       // Ширина коллажа - ширина карусели - 20px margin-right
-    posFinal = -(collageWidth - caruselWidth - marginRight)
+    posFinal = Math.floor(-(collageWidth - caruselWidth - marginRight))
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
-    console.log(posInitial, posFinal);
+    console.log(posInitial, posFinal, 'check');
     
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
