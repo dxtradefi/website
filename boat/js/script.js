@@ -62,6 +62,9 @@ function DOMloaded () {
   let posX1 = 0
   let posX2 = 0
   let doubleTouch = false
+
+  console.log(caruselWidth);
+  
   
   // Событие нажатия мыши
   collage.addEventListener('mousedown', startAction)
@@ -131,7 +134,7 @@ function DOMloaded () {
     }
 
       // Текущая позиция колажа при передвижении
-    posInitial =  Math.floor(collage.offsetLeft)
+    posInitial =  Math.round(collage.offsetLeft)
       // Конечная позиция колажа 
       // Ширина колажа, ширини карусели, правый отступ 20px
     posFinal = -(collageWidth - caruselWidth - marginRight)
@@ -172,15 +175,15 @@ function DOMloaded () {
       // Добавляем transition
     animaSlide()
       // Начальная позиция
-    posInitial = Math.floor(collage.offsetLeft)
+    posInitial = Math.round(collage.offsetLeft)
       // Конецовка последнего слайда
       // по отношению к правому краю карусели
       // Ширина коллажа - ширина карусели - 20px margin-right
-    posFinal = Math.floor(-(collageWidth - caruselWidth - marginRight))
+    posFinal = Math.round(-(collageWidth - caruselWidth - marginRight))
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
-    // console.log(posInitial, posFinal, 'check');
+    console.log(posInitial, posFinal, 'check+');
     
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
