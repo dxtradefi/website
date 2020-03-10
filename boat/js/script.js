@@ -202,15 +202,15 @@ function DOMloaded () {
       btnAction('next')      
       
       collage.style.left = `${Math.floor(posFinal)}px`
-      console.log(posFinal);
+      console.log(posFinal, posInitial, (slide / 2), 'end');
       nextBtn.classList.add('hide')
     } 
       // Если смещение меньше половины последнего слайда
       // возвращаем к предыдущему слайду
     else if (posInitial < (posFinal + slide)){
       nextBtn.classList.remove('hide')
-      collage.style.left = `${Math.floor(posFinal) + slide}px`
-      console.log(posFinal + slide);
+      collage.style.left = `${Math.floor(posFinal+ slide)}px`
+      console.log(posFinal + slide, 'prev');
       
     }
       // Сбрасываем событие нажатия
