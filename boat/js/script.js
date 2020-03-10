@@ -49,7 +49,7 @@ function DOMloaded () {
   // СМ. прототип с комментариями
 
   let carusel = document.querySelector('#carusel')
-  let caruselWidth = carusel.getBoundingClientRect().width
+  let caruselWidth = Math.round(carusel.getBoundingClientRect().width)
   const collage = document.querySelector('#collage')
   const collageWidth = collage.getBoundingClientRect().width
   const nextBtn = document.getElementById('next-btn')
