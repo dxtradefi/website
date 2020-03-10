@@ -207,7 +207,7 @@ function DOMloaded () {
     if (posInitial < (posFinal + (slide / 2))) {
       btnAction('next')      
       
-      collage.style.left = `${posFinal}px`
+      collage.style.left = `${Math.floor(posFinal)}px`
       console.log(posFinal);
       nextBtn.classList.add('hide')
     } 
@@ -215,7 +215,7 @@ function DOMloaded () {
       // возвращаем к предыдущему слайду
     else if (posInitial < (posFinal + slide)){
       nextBtn.classList.remove('hide')
-      collage.style.left = `${posFinal + slide}px`
+      collage.style.left = `${Math.floor(posFinal) + slide}px`
       console.log(posFinal + slide);
       
     }
