@@ -49,7 +49,7 @@ function DOMloaded () {
   // СМ. прототип с комментариями
 
   let carusel = document.querySelector('#carusel')
-  let caruselWidth = carusel.getBoundingClientRect().width
+  let caruselWidth = Math.floor(carusel.getBoundingClientRect().width)
   const collage = document.querySelector('#collage')
   const collageWidth = collage.getBoundingClientRect().width
   const nextBtn = document.getElementById('next-btn')
@@ -185,6 +185,8 @@ function DOMloaded () {
     posFinal = -(collageWidth - caruselWidth - marginRight)
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
+    
+    console.log(posInitial);
     
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
