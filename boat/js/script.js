@@ -140,7 +140,7 @@ function DOMloaded () {
     posInitial =  Math.floor(collage.offsetLeft)
       // Конечная позиция колажа 
       // Ширина колажа, ширини карусели, правый отступ 20px
-    posFinal = -(collageWidth - caruselWidth - marginRight)
+    posFinal = Math.floor(-(collageWidth - caruselWidth - marginRight))
       // Центр одной ячейки слайда
     const halfSlide = (slideWidth + marginRight)
 
