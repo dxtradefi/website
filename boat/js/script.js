@@ -135,10 +135,10 @@ function DOMloaded () {
     }
 
       // Текущая позиция колажа при передвижении
-    posInitial =  collage.offsetLeft
+    posInitial = Math.round(collage.offsetLeft)
       // Конечная позиция колажа 
       // Ширина колажа, ширини карусели, правый отступ 20px
-    posFinal = -(collageWidth - caruselWidth - marginRight)
+    posFinal = Math.round(-(collageWidth - caruselWidth - marginRight))
       // Центр одной ячейки слайда
     const halfSlide = (slideWidth + marginRight)
 
@@ -184,7 +184,7 @@ function DOMloaded () {
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
-    console.log(posInitial, posFinal, 'Math round');
+    console.log(posInitial, posFinal, 'Math+');
     
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
