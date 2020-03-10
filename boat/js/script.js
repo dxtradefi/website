@@ -49,7 +49,7 @@ function DOMloaded () {
   // СМ. прототип с комментариями
 
   let carusel = document.querySelector('#carusel')
-  let caruselWidth = carusel.getBoundingClientRect().width
+  let caruselWidth = Math.round(carusel.getBoundingClientRect().width)
   const collage = document.querySelector('#collage')
   const collageWidth = collage.getBoundingClientRect().width
   const nextBtn = document.getElementById('next-btn')
@@ -176,7 +176,7 @@ function DOMloaded () {
       // Добавляем transition
     animaSlide()
       // Начальная позиция
-    posInitial =collage.offsetLeft
+    posInitial = Math.round(collage.offsetLeft)
       // Конецовка последнего слайда
       // по отношению к правому краю карусели
       // Ширина коллажа - ширина карусели - 20px margin-right
@@ -184,7 +184,7 @@ function DOMloaded () {
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
-    console.log(posInitial, posFinal, 'check-');
+    console.log(posInitial, posFinal, 'Math round');
     
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
@@ -202,7 +202,7 @@ function DOMloaded () {
 
       // Если смещение больше половины последнего слайда
       // возвращаем к posFinal
-    if (posInitial < (posFinal + (slide / 2))) {
+    if (posInitial <= (posFinal + (slide / 2))) {
       btnAction('next')      
       
       collage.style.left = `${posFinal}px`
