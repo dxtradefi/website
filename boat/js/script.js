@@ -186,7 +186,7 @@ function DOMloaded () {
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
-    console.log(posInitial);
+    console.log(posInitial, posFinal);
     
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
