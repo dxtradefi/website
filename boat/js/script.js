@@ -176,7 +176,7 @@ function DOMloaded () {
       // Конецовка последнего слайда
       // по отношению к правому краю карусели
       // Ширина коллажа - ширина карусели - 20px margin-right
-    posFinal = -(collageWidth - caruselWidth - marginRight)
+    posFinal = Math.floor(-(collageWidth - caruselWidth - marginRight))
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
@@ -201,7 +201,7 @@ function DOMloaded () {
     if (posInitial < (posFinal + (slide / 2))) {
       btnAction('next')      
       
-      collage.style.left = `${Math.floor(posFinal)}px`
+      collage.style.left = `${posFinal}px`
       console.log(posFinal, posInitial, (slide / 2), 'end');
       nextBtn.classList.add('hide')
     } 
@@ -209,7 +209,7 @@ function DOMloaded () {
       // возвращаем к предыдущему слайду
     else if (posInitial < (posFinal + slide)){
       nextBtn.classList.remove('hide')
-      collage.style.left = `${Math.floor(posFinal+ slide)}px`
+      collage.style.left = `${posFinal+ slide}px`
       console.log(posFinal + slide, 'prev');
       
     }
