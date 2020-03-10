@@ -62,6 +62,10 @@ function DOMloaded () {
   let posX1 = 0
   let posX2 = 0
   let doubleTouch = false
+
+
+  console.log(caruselWidth, collageWidth);
+  
   
   // Событие нажатия мыши
   collage.addEventListener('mousedown', startAction)
@@ -103,7 +107,7 @@ function DOMloaded () {
     }
     
       // Начальная позиция колажа 
-    posInitial = collage.offsetLeft
+    // posInitial = collage.offsetLeft
     if (e.type === 'touchstart') { 
         // Текущая позиция касания
       posX1 = e.touches[0].screenX
@@ -133,7 +137,7 @@ function DOMloaded () {
     }
 
       // Текущая позиция колажа при передвижении
-      posInitial = collage.offsetLeft
+    posInitial =  Math.floor(collage.offsetLeft)
       // Конечная позиция колажа 
       // Ширина колажа, ширини карусели, правый отступ 20px
     posFinal = -(collageWidth - caruselWidth - marginRight)
@@ -166,15 +170,15 @@ function DOMloaded () {
 
       // Отнимаем от текущей позиции элемента
       // полученое смещение курсора
-    collage.style.left = `${collage.offsetLeft - posX2}px`
+    collage.style.left = `${Math.floor(collage.offsetLeft - posX2)}px`
   }
   
     // Функия при отжатии мыши/пальца от карусели
   function endAction () {
-        // Добавляем transition
-      animaSlide()
+      // Добавляем transition
+    animaSlide()
       // Начальная позиция
-      posInitial = collage.offsetLeft
+    posInitial = Math.floor(collage.offsetLeft)
       // Конецовка последнего слайда
       // по отношению к правому краю карусели
       // Ширина коллажа - ширина карусели - 20px margin-right
@@ -216,7 +220,7 @@ function DOMloaded () {
 
     // Стрелочный контроллер (кнопки - стрелки)
   function btnAction(dir) {
-    posInitial = collage.offsetLeft
+    posInitial =  Math.floor(collage.offsetLeft)
 
     let steps = caruselWidth / (slideWidth + marginRight)
     let eachStep = slideLenght - steps
@@ -224,7 +228,6 @@ function DOMloaded () {
     const slide = (slideWidth + marginRight)
       // Текущая позиция колажа при передвижении
     let limiter = collage.offsetLeft - slideWidth
-      
       // Конечная позиция колажа
     posFinal = -(collageWidth - caruselWidth - marginRight)
 
