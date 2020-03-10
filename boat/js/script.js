@@ -134,7 +134,7 @@ function DOMloaded () {
     }
 
       // Текущая позиция колажа при передвижении
-    posInitial =  Math.round(collage.offsetLeft)
+    posInitial =  collage.offsetLeft
       // Конечная позиция колажа 
       // Ширина колажа, ширини карусели, правый отступ 20px
     posFinal = -(collageWidth - caruselWidth - marginRight)
@@ -175,11 +175,11 @@ function DOMloaded () {
       // Добавляем transition
     animaSlide()
       // Начальная позиция
-    posInitial = Math.round(collage.offsetLeft)
+    posInitial =collage.offsetLeft
       // Конецовка последнего слайда
       // по отношению к правому краю карусели
       // Ширина коллажа - ширина карусели - 20px margin-right
-    posFinal = Math.round(-(collageWidth - caruselWidth - marginRight))
+    posFinal = -(collageWidth - caruselWidth - marginRight)
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
     
