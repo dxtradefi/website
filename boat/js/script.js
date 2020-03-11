@@ -62,10 +62,6 @@ function DOMloaded () {
   let posX1 = 0
   let posX2 = 0
   let doubleTouch = false
-
-
-  console.log(caruselWidth);
-  
   
   // Событие нажатия мыши
   collage.addEventListener('mousedown', startAction)
@@ -166,9 +162,15 @@ function DOMloaded () {
       nextBtn.classList.remove('hide')
     }
 
-      // Отнимаем от текущей позиции элемента
+    // Отнимаем от текущей позиции элемента
+    // Фиксируем начальное и конечно положение 
+    // (убирает поддергивания карусели если выходит за пределы 1-2px)
+    let posCurrent = collage.offsetLeft - posX2
+    posCurrent = posCurrent <= 0 ? posCurrent : null
+    posCurrent = posCurrent >= posFinal ? posCurrent : null
+    
       // полученое смещение курсора
-    collage.style.left = `${collage.offsetLeft - posX2}px`
+    collage.style.left = `${posCurrent}px`
   }
   
     // Функия при отжатии мыши/пальца от карусели
@@ -183,9 +185,7 @@ function DOMloaded () {
     posFinal = Math.round(-(collageWidth - caruselWidth - marginRight))
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
-    
-    console.log(posInitial, posFinal, 'Math+');
-    
+        
       // Если смещение меньше половины начального слайда
       // Возвращаем к началу
     if (posInitial > -(slide / 2)) {
@@ -204,9 +204,7 @@ function DOMloaded () {
       // возвращаем к posFinal
     if (posInitial <= (posFinal + (slide / 2))) {
       btnAction('next')      
-      
       collage.style.left = `${posFinal}px`
-      console.log(posFinal, posInitial, (slide / 2), 'end');
       nextBtn.classList.add('hide')
     } 
       // Если смещение меньше половины последнего слайда
@@ -214,8 +212,6 @@ function DOMloaded () {
     else if (posInitial < (posFinal + slide)){
       nextBtn.classList.remove('hide')
       collage.style.left = `${posFinal+ slide}px`
-      console.log(posFinal + slide, 'prev');
-      
     }
       // Сбрасываем событие нажатия
     document.onmouseup = null
