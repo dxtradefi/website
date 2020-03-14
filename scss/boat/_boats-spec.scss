@@ -12,7 +12,7 @@ $boat-txt: #8B89A7;
 
 // СПЕЦИАЛЬНЫЕ !!!
 section#boats-block {
-  padding: 0;
+  padding: 0px;
   @media screen 
     and (max-device-width: 1000px)
     and (min-device-width: 320px)
@@ -22,108 +22,172 @@ section#boats-block {
   }
 }
 
-h1#boat-name {
-  width: 100%;
-  padding: 0 15px;
+#boat-name {
+  width:100%;
+  display: flex;
   margin: 100px 0 40px;
-  font-size: 3.5rem;
-  font-weight: 400;
+  padding-left: 15px;
+  align-items: center;
+  h1 {
+    width: calc(100% - 30px);
+    font-size: 3.5rem;
+    font-weight: 400;
+    padding-right: 30px;
+    @media screen 
+    and (max-device-width: 500px) {
+      font-size: 2.7rem;
+    }
+  }
+  .dir-arrow {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid rgba(white, .8);
+    z-index: 10;
+    @media screen 
+      and (min-device-width: 500px) {
+      display: none;
+    }
+    span {
+      width: 14px;
+      height: 3px;
+      position: absolute;
+      top: 11px;
+      left: 6px;
+      border-radius: 50px;
+      background-color: rgba(white, .8);
+      &::after {
+        content: '';
+        width: 8px;
+        height: 3px;
+        position: absolute;
+        top: 3px;
+        right: 0px;
+        border-radius: 50px;
+        background-color: inherit;
+        transform: rotate(-45deg);
+      }
+      &::before {
+        content: '';
+        width: 8px;
+        height: 3px;
+        position: absolute;
+        top: -3px;
+        right: 0px;
+        border-radius: 50px;
+        background-color: inherit;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
+
+
 #carusel {
   width: 100%;
   height: 300px;
   position: relative;
+  @media screen 
+    and (max-device-width: 500px)
+    and (orientation: portrait) {
+      height: 270px;
+      overflow: hidden;
+  }
   .wrapper {
     width: inherit;
     height: inherit;
     overflow: hidden;
     position: relative;
   }
-  .ctr-btn {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    opacity: 1;
-    transition: all .3s ease-in-out;
-    transform: translateY(-50%);
-    background-color: lighten($body, 5);
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgba( $shadow, .4);
-    cursor: pointer;
-    pointer-events: all;
-    z-index: 100;
-    @media screen 
-      and (max-device-width: 500px)
-      and (orientation: portrait) {
-      display: none;
+}
+.ctr-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+  transform: translateY(-50%);
+  background-color: lighten($body, 5);
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba( $shadow, .4);
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 100;
+  @media screen 
+    and (max-device-width: 500px)
+    and (orientation: portrait) {
+    display: none;
+  }
+  @media screen 
+    and (max-device-width: 1000px)
+    and (orientation: landscape) {
+    display: none;
+  }
+  &#next-btn {
+    right: -25px;
+    &::after {
+      content: '';
+      width: 20px;
+      height: 3px;
+      position: absolute;
+      top: 18px;
+      left: 16px;
+      background-color: #ffffff;
+      transform: rotate(45deg);
     }
-    @media screen 
-      and (max-device-width: 1000px)
-      and (orientation: landscape) {
-      display: none;
-    }
-    &#next-btn {
-      right: -25px;
-      &::after {
-        content: '';
-        width: 20px;
-        height: 3px;
-        position: absolute;
-        top: 18px;
-        left: 16px;
-        background-color: #ffffff;
-        transform: rotate(45deg);
-      }
-      &::before { 
-        content: '';
-        width: 20px;
-        height: 3px;
-        position: absolute;
-        top: 30px;
-        left: 16px;
-        background-color: #ffffff;
-        transform: rotate(-45deg);
-      }
-    }
-    &#prev-btn {
-      left: -25px;
-      &::after {
-        content: '';
-        width: 20px;
-        height: 3px;
-        position: absolute;
-        top: 18px;
-        left: 14px;
-        background-color: #ffffff;
-        transform: rotate(-45deg);
-      }
-      &::before { 
-        content: '';
-        width: 20px;
-        height: 3px;
-        position: absolute;
-        top: 30px;
-        left: 14px;
-        background-color: #ffffff;
-        transform: rotate(45deg);
-      }
-    }
-    &.hide {
-      opacity: 0;
-      transition: all .3s ease-in-out;
-      pointer-events: none;
-      cursor: none;
+    &::before { 
+      content: '';
+      width: 20px;
+      height: 3px;
+      position: absolute;
+      top: 30px;
+      left: 16px;
+      background-color: #ffffff;
+      transform: rotate(-45deg);
     }
   }
+  &#prev-btn {
+    left: -25px;
+    &::after {
+      content: '';
+      width: 20px;
+      height: 3px;
+      position: absolute;
+      top: 18px;
+      left: 14px;
+      background-color: #ffffff;
+      transform: rotate(-45deg);
+    }
+    &::before { 
+      content: '';
+      width: 20px;
+      height: 3px;
+      position: absolute;
+      top: 30px;
+      left: 14px;
+      background-color: #ffffff;
+      transform: rotate(45deg);
+    }
+  }
+  &.hide {
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    pointer-events: none;
+    cursor: none;
+  }
 }
+
   // ВНИМАНИЕ!!!!
   // Ни в коем случае не вешать transition 
   // На класс который нужно передвигать мышью!!!
   #collage {
-    height: 300px;
+    height: inherit;
     position: absolute;
-    left: 0px;
+    left: 15px;
+    // transform: translate3d(15px, 0, 0);
     display: flex;
   }
   .slide {
@@ -138,10 +202,10 @@ h1#boat-name {
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(black, .3);
     cursor: grab;
-    &:last-of-type {
-      .dir-arrow {
-        display: none;
-      }
+      @media screen 
+      and (max-device-width: 500px)
+      and (orientation: portrait) {
+        height: 270px;
     }
     img {
       width: inherit;
@@ -169,52 +233,6 @@ h1#boat-name {
         and (max-device-width: 1000px)
         and (orientation: landscape){
         display: none;
-      }
-      
-    }
-    .dir-arrow {
-      width: 30px;
-      height: 30px;
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      border-radius: 50%;
-      border: 2px solid rgba(white, .6);
-      z-index: 10;
-      @media screen 
-        and (min-device-width: 500px) {
-        display: none;
-      }
-      span {
-        width: 14px;
-        height: 3px;
-        position: absolute;
-        top: 11px;
-        left: 6px;
-        border-radius: 50px;
-        background-color: rgba(white, .6);
-        &::after {
-          content: '';
-          width: 8px;
-          height: 3px;
-          position: absolute;
-          top: 3px;
-          right: 0px;
-          border-radius: 50px;
-          background-color: inherit;
-          transform: rotate(-45deg);
-        }
-        &::before {
-          content: '';
-          width: 8px;
-          height: 3px;
-          position: absolute;
-          top: -3px;
-          right: 0px;
-          border-radius: 50px;
-          background-color: inherit;
-          transform: rotate(45deg);
-        }
       }
     }
     &:hover {

@@ -48,14 +48,13 @@ function DOMloaded () {
   // КАРУСЕЛЬ КАРТИНОК
   // СМ. прототип с комментариями
 
-  let carusel = document.querySelector('#carusel')
+  const carusel = document.querySelector('#carusel')
   let caruselWidth = Math.round(carusel.getBoundingClientRect().width)
   const collage = document.querySelector('#collage')
   const collageWidth = collage.getBoundingClientRect().width
   const nextBtn = document.getElementById('next-btn')
   const prevBtn = document.getElementById('prev-btn')
   const slideWidth = collage.children[0].getBoundingClientRect().width
-  const slideLenght = collage.children.length
   const marginRight = 20
   var posInitial
   let posFinal
@@ -85,6 +84,7 @@ function DOMloaded () {
   function animaSlide() {
     collage.classList.add('slide-anim')
   } 
+
     // Функция событие при нажатии на карусель
   function startAction (e) {
       // Ignored attempt to cancel a touchstart event with cancelable=false
@@ -137,16 +137,6 @@ function DOMloaded () {
     posFinal = Math.round(-(collageWidth - caruselWidth - marginRight))
       // Центр одной ячейки слайда
     const halfSlide = (slideWidth + marginRight)
-
-      // Ограничить, зона за пределы которой не выходит колаж
-    if (posInitial > 0 ) {
-      collage.style.left = 0 + 'px'
-      return
-    }
-    if (posInitial < posFinal) {
-      collage.style.left = posFinal + 'px'
-      return
-    }
     
       // Класс для контроллера 
     if (posInitial > -halfSlide ) {
@@ -166,7 +156,7 @@ function DOMloaded () {
     // Фиксируем начальное и конечно положение 
     // (убирает поддергивания карусели если выходит за пределы 1-2px)
     let posCurrent = collage.offsetLeft - posX2
-    posCurrent = posCurrent <= 0 ? posCurrent : null
+    posCurrent = posCurrent <= 15 ? posCurrent : null
     posCurrent = posCurrent >= posFinal ? posCurrent : null
     
       // полученое смещение курсора
@@ -190,7 +180,7 @@ function DOMloaded () {
       // Возвращаем к началу
     if (posInitial > -(slide / 2)) {
       btnAction('prev')
-      collage.style.left = `${0}px`
+      collage.style.left = `${15}px`
       prevBtn.classList.add('hide')
     } 
       // Если смещение больше половины начального слайда
@@ -220,17 +210,13 @@ function DOMloaded () {
 
     // Стрелочный контроллер (кнопки - стрелки)
   function btnAction(dir) {
+      // Начальная позиция
     posInitial =  collage.offsetLeft
-
-    let steps = caruselWidth / (slideWidth + marginRight)
-    let eachStep = slideLenght - steps
       // Слайд с правым отступом
     const slide = (slideWidth + marginRight)
-      // Текущая позиция колажа при передвижении
-    let limiter = collage.offsetLeft - slideWidth
       // Конечная позиция колажа
     posFinal = -(collageWidth - caruselWidth - marginRight)
-
+      // добавляем стиль с Transition
     animaSlide()
     
       if (dir === 'next') {
@@ -251,7 +237,7 @@ function DOMloaded () {
 
       if (posInitial >= -(slide)) {
         prevBtn.classList.add('hide')
-        collage.style.left = `${0}px`
+        collage.style.left = `${15}px`
       }
     }
   }
