@@ -205,34 +205,10 @@ section#boats-block {
     transition: all 0.3s ease-in-out;
     z-index: 5;
   }
-  // figcaption {
-  //   width: inherit;
-  //   height: 100%;
-  //   opacity: 1;
-  //   position: absolute;
-  //   border-radius: inherit;
-  //   // background-color: rgba($body, .5);
-  //   transition: all .3s ease-in-out;
-  //   z-index: 10;
-  //   @media screen
-  //     and (max-device-width: 500px)
-  //     and (orientation: portrait){
-  //     display: none;
-  //   }
-  //   @media screen
-  //     and (max-device-width: 1000px)
-  //     and (orientation: landscape){
-  //     display: none;
-  //   }
-  // }
   &:hover {
     img {
       border-color: $border;
     }
-    // figcaption {
-    //   opacity: 0;
-    //   pointer-events: none;
-    // }
     i {
       transform: translateX(10px);
     }
