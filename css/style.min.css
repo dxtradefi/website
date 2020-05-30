@@ -3359,8 +3359,8 @@ section#boats-block {
   position: absolute;
   top: 50%;
   opacity: 1;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background-color: #2d394e;
@@ -3442,8 +3442,8 @@ section#boats-block {
 
 .ctr-btn.hide {
   opacity: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   pointer-events: none;
   cursor: none;
 }
@@ -3495,13 +3495,13 @@ section#boats-block {
   border-width: 5px;
   border-style: solid;
   border-color: transparent;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 5;
 }
 
 .slide:hover img {
-  border-color: #565D6D;
+  border-color: #565d6d;
 }
 
 .slide:hover i {
@@ -3510,8 +3510,8 @@ section#boats-block {
 }
 
 .slide-anim {
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .modal {
@@ -3531,8 +3531,8 @@ section#boats-block {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 200;
 }
 
@@ -3562,8 +3562,8 @@ section#boats-block {
   background-color: #ffffff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-device-width: 1100px) and (min-device-width: 320px) and (orientation: landscape) {
@@ -3582,8 +3582,8 @@ section#boats-block {
   background-color: #ffffff;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-device-width: 1100px) and (min-device-width: 320px) and (orientation: landscape) {
@@ -3615,8 +3615,8 @@ section#boats-block {
 
 .modal.show-modal {
   opacity: 1;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 section#boat-spec {
@@ -3641,30 +3641,31 @@ section#boat-spec #buttons button {
   padding: 15px 18px;
   border: none;
   border-radius: 50px;
-  color: #8B89A7;
+  color: #8b89a7;
   font-size: 1.2rem;
-  background-color: #2D374A;
+  background-color: #2d374a;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 section#boat-spec #buttons button:hover {
-  color: #242D3E;
-  background-color: #8B89A7;
+  color: #242d3e;
+  background-color: #8b89a7;
 }
 
 section#boat-spec #buttons button.active {
-  color: #242D3E;
-  background-color: #8B89A7;
+  color: #242d3e;
+  background-color: #8b89a7;
   -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.55);
           box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.55);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-section#boat-spec p, section#boat-spec span {
+section#boat-spec p,
+section#boat-spec span {
   font-size: 1.6rem;
 }
 
