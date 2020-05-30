@@ -3492,36 +3492,16 @@ section#boats-block {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   z-index: 5;
 }
 
-.slide figcaption {
-  width: inherit;
-  height: 100%;
-  opacity: 1;
-  position: absolute;
-  border-radius: inherit;
-  background-color: rgba(36, 45, 62, 0.5);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  z-index: 10;
-}
-
-@media screen and (max-device-width: 500px) and (orientation: portrait) {
-  .slide figcaption {
-    display: none;
-  }
-}
-
-@media screen and (max-device-width: 1000px) and (orientation: landscape) {
-  .slide figcaption {
-    display: none;
-  }
-}
-
-.slide:hover figcaption {
-  opacity: 0;
-  pointer-events: none;
+.slide:hover img {
+  border-color: #565D6D;
 }
 
 .slide:hover i {
@@ -3547,7 +3527,7 @@ section#boats-block {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);

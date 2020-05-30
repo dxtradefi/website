@@ -213,33 +213,41 @@ section#boats-block {
       border-radius: inherit;
       object-fit: cover;
       position: absolute;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent;
+      transition: all .3s ease-in-out;
       z-index: 5;
     }
-    figcaption {
-      width: inherit;
-      height: 100%;
-      opacity: 1;
-      position: absolute;
-      border-radius: inherit;
-      background-color: rgba($body, .5);
-      transition: all .3s ease-in-out;
-      z-index: 10;
-      @media screen 
-        and (max-device-width: 500px)
-        and (orientation: portrait){
-        display: none;
-      }
-      @media screen 
-        and (max-device-width: 1000px)
-        and (orientation: landscape){
-        display: none;
-      }
-    }
+    // figcaption {
+    //   width: inherit;
+    //   height: 100%;
+    //   opacity: 1;
+    //   position: absolute;
+    //   border-radius: inherit;
+    //   // background-color: rgba($body, .5);
+    //   transition: all .3s ease-in-out;
+    //   z-index: 10;
+    //   @media screen 
+    //     and (max-device-width: 500px)
+    //     and (orientation: portrait){
+    //     display: none;
+    //   }
+    //   @media screen 
+    //     and (max-device-width: 1000px)
+    //     and (orientation: landscape){
+    //     display: none;
+    //   }
+    // }
     &:hover {
-      figcaption {
-        opacity: 0;
-        pointer-events: none;
+      img {
+        border-color: $border;
+
       }
+      // figcaption {
+      //   opacity: 0;
+      //   pointer-events: none;
+      // }
       i {
         transform: translateX(10px);
       }
@@ -258,7 +266,7 @@ section#boats-block {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba( #000000, .8);
