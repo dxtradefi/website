@@ -12,72 +12,67 @@
   <link rel="stylesheet" href="../css/style.min.css">
   <link rel="stylesheet" href="../img/css/dxtrade.css">
 </head>
-
-<style>
-ul {
-  display:inline-block;
-  text-align: left;
-  list-style-position: inside;
-}
-
-</style>
-
-<body id="it">
-  <main>
-    <div id="btn_back">
-      <a href="../index.html">
-        <div id="btn_back--icon"></div>
-      </a>
-      <span>Alkusivu</span>
-    </div>
-    <section class="content">
-      <h1 class="home">Kuormasidontaliinat</h1>
+  <body id="boat">
+    <main class="pad0">
+      <section class="content" id="boats-block">
+        <div id="boat-name">
+          <h1>Kuormasidontaliinat</h1>
+        </div>
     </section>
-
-<font size="4">
+        <section id="carusel">
+          <div class="wrapper">
+            <div id="collage" draggable="false">
+              <figure class="slide">
+                <img src="./belt-1.jpg" alt="Kuormasidontaliina"/>
+              </figure>
+              <figure class="slide">
+                <img src="./belt-2.jpg" alt="Kuormasidontaliina"/>
+              </figure>
+              <figure class="slide">
+                <img src="./belt-3.jpg" alt="Kuormasidontaliina"/>
+              </figure>
+            </div>
+          </div>
+          <div id="next-btn" class="ctr-btn"></div>
+          <div id="prev-btn" class="ctr-btn hide"></div>
+        </section>
+        <section id="boat-spec">
+          <p>Kaksoisklikkaa kuvaa suurentaaksesi</p>
+          <div id="buttons">
+            <button class="active" data-btnId="1">Kuvaus</button>
+            <!-- <button data-btnId="2">Tekniset tiedot</button> -->
+            <!-- <button data-btnId="3">Muut</button> -->
+          </div>
+          <div id="info-content" class="bt-box show-spec" data-boxId="1">
+            <p>
+            <p>Nauhan leveys 50 mm, normaalikoukku, hitsattu, pituus 9,5 m</p>
+            <p>Vahva rataslukko + normaalikoukku, hitsattu, pituus 0,5 m</p>
+            <p>- nimellislujuus 2 500 kg</p>
+            <p>- murtolujuus 5 000 kg</p>
+            <p>Testaus: Vetokoe ISO 527</p>
+            <br>
+            <p>Kuormasidontaliinat täyttävät 2014/47/EU vaatimukset sekä seuraavat harmonisoidut standardit:</p>
+            <p>SFS EN 12195-1:2010 Maantieajoneuvojen kuormanvarmistus.</p>
+            <p>SFS EN 12195-2 Tekokuituiset kiinnitysvälineet.</p>
+<br><br>
+            <b><font color="FFFFFF" size="+1">Hinta 19,90 €</b>, sis ALV 24%.</font>
 
 <br><br>
 
-<img src=belt-1.jpg  width="640" height="480">
-<br>
-<img src=belt-2.jpg  width="640" height="480">
-<br>
-<img src=belt-3.jpg  width="640" height="480">
-
-<br><br>
-
-Nauhan leveys 50 mm, normaalikoukku, hitsattu, pituus 9,5 m
-<br>
-Vahva rataslukko + normaalikoukku, hitsattu, pituus 0,5 m
-<br>
-- nimellislujuus 2 500 kg
-<br>
-- murtolujuus 5 000 kg
-<br>
-Testaus: Vetokoe ISO 527
-
-<br><br>
-
-Kuormasidontaliinat täyttävät 2014/47/EU vaatimukset sekä seuraavat harmonisoidut standardit:
-<br>
-SFS EN 12195-1:2010 Maantieajoneuvojen kuormanvarmistus.
-<br>
-SFS EN 12195-2 Tekokuituiset kiinnitysvälineet.
-<br>
-<br><br><font size="6"><b>
-Hinta: 19,90€ (ALV 24 %)
-</font></b><br>
-<br>
-Liinoihin saa halutessa oman logon (lisähinnalla 0,20€ / liina).
+Liinoihin saa halutessa oman logon (lisähinta 0,20€ / liina).
 <br>
 Varmista saatavuus/varastotilanne.
 <br>
 Pyydä tarjousta erikoismitoista/ -määristä.
 
-<br><br><br>
+          </div>
+        </section>
 
-</font>
-</center>
+        <section id="boat-price">
+
+        <br><br><br><br><br>
+
+        </section>
 
     <section class="content">
       <h3 class="home">Kysymyksiä?</h3>
@@ -88,11 +83,11 @@ Pyydä tarjousta erikoismitoista/ -määristä.
         050 3669333
       </a>
     </section>
-  </main>
-  <nav>
+    </main>
+    <nav>
     <ul id="navigation">
       <li>
-        <a href="##" onClick="history.go(-1); return false;">
+        <a href="#" onClick="history.go(-1); return false;">
           <i class="icon-back"></i>
           Takaisin
         </a>
@@ -111,5 +106,6 @@ Pyydä tarjousta erikoismitoista/ -määristä.
       </li>
     </ul>
   </nav>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
