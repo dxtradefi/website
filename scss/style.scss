@@ -1,15 +1,14 @@
-$body: #242D3E;
-$text: #E6E6E6;
-$border: #565D6D;
-$orange: #D58D60;
-$green: #A8B780;
-$red: #D56060;
-$blue: #27588D;
-$violet: #67658D;
+$body: #242d3e;
+$text: #e6e6e6;
+$border: #565d6d;
+$orange: #d58d60;
+$green: #a8b780;
+$red: #d56060;
+$blue: #27588d;
+$violet: #67658d;
 $shadow: #000000;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
-
 
 * {
   margin: 0;
@@ -25,24 +24,19 @@ html {
     font-size: 62.5%;
   }
 }
-html, body {
+html,
+body {
   height: 100%;
   background: $body;
   color: $text;
   font-family: 'Roboto', sans-serif;
   position: relative;
-  @media only screen 
-    and (min-device-width: 320px) 
-    and (max-device-width: 900px)
-    and (orientation: landscape) {
-      height: auto;
-  }
-  @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 900px)
-  and (orientation: portrait) {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
     height: auto;
-}
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: portrait) {
+    height: auto;
+  }
 }
 a {
   text-decoration: none;
@@ -62,10 +56,17 @@ button {
 ul {
   list-style-type: none;
 }
-h1, h2, h3, h4, h5, button, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+a {
   font-weight: 700;
 }
-p, span {
+p,
+span {
   font-weight: 300;
   line-height: 23px;
   &:not(.main) {
@@ -73,16 +74,12 @@ p, span {
   }
 }
 
-
-
-  
 @import './index';
 
 @import './templates';
 @import './sites';
 @import './delivery';
 @import './contacts';
-
 
 // IMPORT IT
 @import './it/index';
@@ -93,3 +90,6 @@ p, span {
 @import './boat/index';
 @import './boat/boats';
 @import './boat/boats-spec';
+
+// IMPORT TRAILER
+@import './trailer/index';

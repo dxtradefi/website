@@ -1,11 +1,11 @@
-$body: #242D3E;
-$text: #E6E6E6;
-$border: #565D6D;
-$orange: #D58D60;
-$green: #A8B780;
-$red: #D56060;
-$blue: #27588D;
-$violet: #67658D;
+$body: #242d3e;
+$text: #e6e6e6;
+$border: #565d6d;
+$orange: #d58d60;
+$green: #a8b780;
+$red: #d56060;
+$blue: #27588d;
+$violet: #67658d;
 $shadow: #000000;
 
 ///// Шаблон кнопки
@@ -13,8 +13,8 @@ $shadow: #000000;
   position: relative;
   border-radius: 150px;
   background: $border;
-  box-shadow: 5px 20px 15px rgba($shadow, .25);
-  transition: all .3s ease-in-out;
+  box-shadow: 5px 20px 15px rgba($shadow, 0.25);
+  transition: all 0.3s ease-in-out;
   z-index: 5;
   &:hover {
     background: lighten($border, 10);
@@ -28,8 +28,8 @@ $shadow: #000000;
     top: 3px;
     left: 3px;
     background: darken($body, 5);
-    box-shadow: 0 5px 5px rgba($shadow, .45);
-    transition: all .3s ease-in-out;
+    box-shadow: 0 5px 5px rgba($shadow, 0.45);
+    transition: all 0.3s ease-in-out;
     z-index: -1;
   }
 }
@@ -38,40 +38,23 @@ $shadow: #000000;
   border-radius: 150px;
   border: 5px solid transparent;
   background: $body;
-  box-shadow:
-    inset 0 0 0px rgba(darken($body, 20), .55),
-    -3px -3px 10px rgba(lighten($body, 10), .55),
-    -6px -6px 15px rgba(lighten($body, 10), .25),
-    3px 3px 10px rgba(darken($body, 10), .55),
-    6px 6px 15px rgba(darken($body, 10), .25);
-  transition: all .3s ease-in-out;
+  box-shadow: inset 0 0 0px rgba(darken($body, 20), 0.55),
+    -3px -3px 10px rgba(lighten($body, 10), 0.55),
+    -6px -6px 15px rgba(lighten($body, 10), 0.25),
+    3px 3px 10px rgba(darken($body, 10), 0.55),
+    6px 6px 15px rgba(darken($body, 10), 0.25);
+  transition: all 0.3s ease-in-out;
   z-index: 5;
   &:hover {
-    // background: lighten($body, 3);
-    // border-color: lighten($body, 15);
-    box-shadow:
-      inset 0 0 20px rgba(darken($body, 30), .55),
-      -3px -3px 10px rgba(lighten($body, 10), .55),
-      -6px -6px 15px rgba(lighten($body, 10), .25),
-      3px 3px 10px rgba(darken($body, 10), .55),
-      6px 6px 15px rgba(darken($body, 10), .25);
-  // &::after {
-  //   content: '';
-  //   width: calc(100% - 6px);
-  //   height: calc(100% - 6px);
-  //   position: absolute;
-  //   border-radius: inherit;
-  //   top: 3px;
-  //   left: 3px;
-  //   // background: darken($body, 5);
-  //   box-shadow: 0 5px 5px rgba($shadow, .45);
-  //   transition: all .3s ease-in-out;
-  //   z-index: -1;
-  // }
+    box-shadow: inset 0 0 20px rgba(darken($body, 30), 0.55),
+      -3px -3px 10px rgba(lighten($body, 10), 0.55),
+      -6px -6px 15px rgba(lighten($body, 10), 0.25),
+      3px 3px 10px rgba(darken($body, 10), 0.55),
+      6px 6px 15px rgba(darken($body, 10), 0.25);
   }
 }
 
-  // Широкая кнопка
+// Широкая кнопка
 .link-btn {
   padding: 16px 35px;
   font-size: 1.6rem;
@@ -79,7 +62,7 @@ $shadow: #000000;
   letter-spacing: 1.2px;
   @extend .btn;
 }
-  // Широкая кнопка
+// Широкая кнопка
 .it-btn {
   margin-bottom: 70px;
   padding: 25px 35px 25px 70px;
@@ -89,7 +72,7 @@ $shadow: #000000;
   @extend .btn2;
   color: darken($text, 20);
   @media (max-device-width: 600px) {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
   div.icon-bt {
     width: 40px;
@@ -99,10 +82,9 @@ $shadow: #000000;
     left: 15px;
     border-radius: 50%;
     background: $green;
-    box-shadow:
-      inset 1px 3px 5px rgba($shadow, .4),
-      0 0 3px 1px rgba($border, .9);
-      transform: translateY(-50%);
+    box-shadow: inset 1px 3px 5px rgba($shadow, 0.4),
+      0 0 3px 1px rgba($border, 0.9);
+    transform: translateY(-50%);
     &::after {
       content: '';
       width: 40px;
@@ -113,7 +95,7 @@ $shadow: #000000;
       border-radius: 50%;
       background: $green;
       filter: blur(3px);
-      transform: scale(.9);
+      transform: scale(0.9);
       opacity: 1;
       animation: callphone 3s ease-in-out infinite;
       z-index: -1;
@@ -134,18 +116,14 @@ $shadow: #000000;
   }
 }
 
-// @keyframes callphone {
-//   50% {box-shadow:
-//     0 0 0px 0px rgba(red, 1);}
-//   100% {box-shadow:
-//     0 0 15px 15px rgba(red, 0);}
-// }
 @keyframes callphone {
-  50% {transform: scale(1.5); opacity: 0;}
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
-
-  // Круговая кнопка
+// Круговая кнопка
 .circle-btn {
   display: flex;
   justify-content: center;
@@ -154,27 +132,26 @@ $shadow: #000000;
   @extend .btn;
   &:hover {
     &::after {
-      transform: scale(.93);
+      transform: scale(0.93);
     }
   }
 }
 
-  // NНАВИГАЦИЯ ПО САЙТАМ
+// NНАВИГАЦИЯ ПО САЙТАМ
 nav {
   width: 501px;
   position: fixed;
-  // background: linear-gradient(to top, lighten($body, 30) 0%, lighten($body, 20));
   background: lighten($body, 10);
   z-index: 1000;
   @media (max-width: 500px) {
-      width: 100%;
-      bottom: 0;
-    }
+    width: 100%;
+    bottom: 0;
+  }
 
   @media (min-width: 501px) {
     top: 0;
-    border-radius:  0 0 15px 15px;
-    box-shadow: 0px 10px 10px rgba($shadow, .2);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px 10px 10px rgba($shadow, 0.2);
   }
   ul#navigation {
     display: flex;
@@ -195,7 +172,7 @@ nav {
       // Кнопка назад
       &.back-btn {
         @media (max-width: 500px) {
-         display: none;
+          display: none;
         }
       }
     }
@@ -207,11 +184,11 @@ nav {
       color: darken($text, 20);
       font-size: 1.3rem;
       font-weight: 400;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       i {
-        color:darken($text, 20);
+        color: darken($text, 20);
         font-size: 2.5rem;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
       &:hover {
         color: $text;
@@ -226,11 +203,10 @@ nav {
         }
       }
     }
-
   }
 }
 
-  // Кнопка назад для моб.
+// Кнопка назад для моб.
 div#btn_back_spec {
   width: 600px;
   height: 60px;
@@ -240,27 +216,23 @@ div#btn_back_spec {
   align-items: center;
   background-color: darken($body, 3);
   z-index: 100;
-  @media only screen
-    and (max-device-width: 900px)
-    and (orientation: landscape) {
-      width: 100%;
-    }
+  @media only screen and (max-device-width: 900px) and (orientation: landscape) {
+    width: 100%;
+  }
 }
-div#btn_back, #btn_back_spec {
+div#btn_back,
+#btn_back_spec {
   display: none;
-  @media only screen
-    and (min-device-width: 320px)
-    and (max-device-width: 500px)
-    and (orientation: portrait) {
-      width: 100%;
-      height: 60px;
-      position: fixed;
-      top: 0;
-      display: flex;
-      align-items: center;
-      background-color: darken($body, 3);
-      z-index: 100;
-    }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait) {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: darken($body, 3);
+    z-index: 100;
+  }
   a {
     width: 40px;
     height: 40px;

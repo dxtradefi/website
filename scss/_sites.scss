@@ -1,11 +1,11 @@
-$body: #242D3E;
-$text: #E6E6E6;
-$border: #565D6D;
-$orange: #D58D60;
-$green: #A8B780;
-$red: #D56060;
-$blue: #27588D;
-$violet: #67658D;
+$body: #242d3e;
+$text: #e6e6e6;
+$border: #565d6d;
+$orange: #d58d60;
+$green: #a8b780;
+$red: #d56060;
+$blue: #27588d;
+$violet: #67658d;
 $shadow: #000000;
 
 body#it,
@@ -24,20 +24,13 @@ body#boat {
       width: 600px;
       margin: auto;
     }
-    @media only screen 
-      and (min-device-width: 320px)
-      and (max-device-width: 900px)
-      and (orientation: landscape) {
-        width: 100%;
-        padding-top: 40px;
-      }
-    @media only screen
-      and (min-device-width: 320px)
-      and (max-device-width: 500px)
-      and (orientation: portrait) {
-        width: 100%;
-        
-      }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
+      width: 100%;
+      padding-top: 40px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait) {
+      width: 100%;
+    }
     &.pad0 {
       padding-top: 0px;
       justify-content: start;
@@ -45,7 +38,7 @@ body#boat {
   }
 }
 
-  // Блок с картинкой
+// Блок с картинкой
 section.image {
   height: 365px;
   display: flex;
@@ -61,7 +54,7 @@ section.image {
     overflow: hidden;
   }
 }
-  // Блок с содержанием
+// Блок с содержанием
 section.content {
   display: flex;
   flex-direction: column;
@@ -70,9 +63,20 @@ section.content {
   @media (max-width: 500px) {
     font-size: 7rem;
   }
-
+  &.bitcoin {
+    margin-bottom: 20px;
+    img {
+      margin: 15px 0 8px;
+    }
+    @media (max-device-width: 600px) {
+      margin-bottom: 150px;
+    }
+    // @media (max-width: 600px) {
+    //   margin-bottom: 150px;
+    // }
+  }
 }
-  // СОДЕРЖАНИЕ
+// СОДЕРЖАНИЕ
 h1.home {
   font-size: 5rem;
   margin-top: 25px;
@@ -104,10 +108,7 @@ p.home {
     line-height: 20px;
     text-align: left;
   }
-  @media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 900px)
-  and (orientation: landscape) {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
     width: 75%;
   }
 }
